@@ -12,14 +12,10 @@ const trpc = createTRPCProxyClient<appRouter>({
 
 
 async function main() {
-    const result = await trpc.wrsat.test.query({
-        usuario: env.USER, senha: env.PASSWORD,
-        ordem: null,
-        limit: null,
-        pagina: null,
-        descricao: null
+    const result = await trpc.wrsat.listaVeiculos.query({
+        usuario: env.USER, senha: env.PASSWORD
     })
-
+    
     console.log(result)
 }
 
