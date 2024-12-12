@@ -1,8 +1,6 @@
-const server = Bun.serve({
-    port: 3000,
-    fetch(req) {
-      return new Response("Bun!");
-    },
-  });
-  
-  console.log(`Listening on http://localhost:${server.port} ...`);
+import { createBunServeHandler } from "trpc-bun-adapter";
+import { AppRouter } from "./src/api/trpc/router";
+
+Bun.serve(createBunServeHandler({router: AppRouter}))
+
+console.log("Listening on http://localhost:3000 ...");
