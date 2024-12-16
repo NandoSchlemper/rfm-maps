@@ -4,13 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "dev": "bunx --bun vite",
+    "build": "bunx --bun vite build",
+    "preview": "bunx --bun vite preview"
   },
   "dependencies": {
     "@react-google-maps/api": "^2.20.3",
+    "@types/node": "^22.10.2",
     "@vis.gl/react-google-maps": "^1.4.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

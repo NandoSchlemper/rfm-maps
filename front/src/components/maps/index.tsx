@@ -4,7 +4,7 @@ import { env } from "../../utils/env";
 
 const google_api = env.GOOGLE_MAPS_API_KEY
 
-export function MapComponent() {
+export const MapComponent = () => {
     return (
         <APIProvider apiKey={google_api}>
             <Map
@@ -12,7 +12,6 @@ export function MapComponent() {
                 defaultCenter={{lat: -22.4376945, lng: -47.5707398}}
                 defaultZoom={3}
                 gestureHandling={'greedy'}
-                disableDefaultUI={true}
             />
         </APIProvider>
     )
