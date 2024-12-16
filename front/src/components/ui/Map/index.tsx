@@ -11,16 +11,16 @@ import { MarkerClusterer } from "@googlemaps/markerclusterer";
 import type { Marker } from "@googlemaps/markerclusterer";
 import { useEffect, useState, useRef } from "react";
 import locations from "../../../data/locations";
-// [{ name: "Oak, English", lat: 43.64, lng: -79.41, key: "ABCD" }]
+// [{ name: "Oak, English", lat: 43.64, lng: -79.41, key: "ABCD" }] -22.4374721, -47.5699381
 
 export default function Intro() {
   return (
     <div style={{ height: "100vh", width: "100%" }}>
       <APIProvider apiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}>
         <Map
-          center={{ lat: 43.64, lng: -79.41 }}
+          center={{ lat: -22.43, lng: -47.56 }}
           zoom={10}
-          mapId={process.env.NEXT_PUBLIC_MAP_ID}
+          mapId={"rfm"}
         >
           <Markers points={locations} />
         </Map>
