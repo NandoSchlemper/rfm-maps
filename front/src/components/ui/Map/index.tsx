@@ -24,9 +24,9 @@ export default function Intro() {
             defaultCenter={{ lat: -22.43, lng: -47.56 }}
             defaultZoom={10}
             mapId={"rfm"}
-          >
+          > 
             <RenderStaticPositions points={locations} />
-          </Map>
+          </Map> 
         </APIProvider>
       </div>
     </div>

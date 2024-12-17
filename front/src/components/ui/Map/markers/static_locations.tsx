@@ -42,7 +42,6 @@ export const RenderStaticPositions = ({ points }: Props) => {
       }
     });
   };
-
   return (
     <>
       {points.map((point) => (
