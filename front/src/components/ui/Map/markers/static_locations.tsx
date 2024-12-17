@@ -10,7 +10,7 @@ import { useEffect, useState, useRef } from "react";
 type Point = google.maps.LatLngLiteral & { key: string };
 type Props = { points: Point[] };
 
-export const renderStaticPositions = ({ points }: Props) => {
+export const RenderStaticPositions = ({ points }: Props) => {
   const map = useMap();
   const [markers, setMarkers] = useState<{ [key: string]: Marker }>({});
   const clusterer = useRef<MarkerClusterer | null>(null);
@@ -47,7 +47,6 @@ export const renderStaticPositions = ({ points }: Props) => {
     <>
       {points.map((point) => (
         <AdvancedMarker
-          className="animate-spin"
           position={point}
           key={point.key}
           ref={(marker) => setMarkerRef(marker, point.key)}

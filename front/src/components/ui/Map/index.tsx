@@ -6,12 +6,13 @@ import {
   Map,
 } from "@vis.gl/react-google-maps";
 import locations from "../../../data/locations";
-import { renderStaticPositions } from "./markers/static_locations";
+import { RenderStaticPositions } from "./markers/static_locations";
 
 export default function Intro() {
   return (
     <div style={{position: "relative",
-                width: "80vw",
+                width: "100vw",
+                top: "10",
                 height: "60vh",
                 marginLeft: "auto",
                 marginRight: "auto",
@@ -24,7 +25,7 @@ export default function Intro() {
             defaultZoom={10}
             mapId={"rfm"}
           >
-            <renderStaticPositions points={locations} />
+            <RenderStaticPositions points={locations} />
           </Map>
         </APIProvider>
       </div>
