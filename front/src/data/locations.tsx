@@ -16,8 +16,6 @@ const locations: RawLocation[] = [
   ["Mogi", -22.466873, -47.011108],
   ["Tatui Guilherme", -23.403164, -47.918895],
   ["Delta", -22.484859, -47.582310],
-  
-
 ]
 
 const formatted: Location[] = locations.map(([name, lat, lng]) => ({

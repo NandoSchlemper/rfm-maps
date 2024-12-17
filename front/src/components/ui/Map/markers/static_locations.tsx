@@ -6,10 +6,11 @@ import { MarkerClusterer } from "@googlemaps/markerclusterer";
 import type { Marker } from "@googlemaps/markerclusterer";
 import { useEffect, useState, useRef } from "react";
 
+// Creating the points and props
 type Point = google.maps.LatLngLiteral & { key: string };
 type Props = { points: Point[] };
 
-export const Markers = ({ points }: Props) => {
+export const renderStaticPositions = ({ points }: Props) => {
   const map = useMap();
   const [markers, setMarkers] = useState<{ [key: string]: Marker }>({});
   const clusterer = useRef<MarkerClusterer | null>(null);

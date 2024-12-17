@@ -6,7 +6,7 @@ import {
   Map,
 } from "@vis.gl/react-google-maps";
 import locations from "../../../data/locations";
-import { Markers } from "./markers";
+import { renderStaticPositions } from "./markers/static_locations";
 
 export default function Intro() {
   return (
@@ -24,7 +24,7 @@ export default function Intro() {
             defaultZoom={10}
             mapId={"rfm"}
           >
-            <Markers points={locations} />
+            <renderStaticPositions points={locations} />
           </Map>
         </APIProvider>
       </div>
