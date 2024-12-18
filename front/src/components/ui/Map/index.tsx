@@ -7,6 +7,10 @@ import {
 } from "@vis.gl/react-google-maps";
 import locations from "../../../data/locations";
 import { RenderStaticPositions } from "./markers/static_locations";
+import { CreateVehiclesMarkers } from "./markers/vehicles_locations";
+import { vehicleData } from "../../../data/vehicleData";
+
+
 
 export default function Intro() {
   return (
@@ -26,6 +30,7 @@ export default function Intro() {
             mapId={"rfm"}
           > 
             <RenderStaticPositions points={locations} />
+            <CreateVehiclesMarkers points={vehicleData} />
           </Map> 
         </APIProvider>
       </div>
